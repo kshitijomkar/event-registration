@@ -13,7 +13,7 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: 'https://your-project-name.vercel.app' }));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI, {})
